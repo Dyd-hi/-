@@ -1,9 +1,9 @@
-package notice.model.dao;
+package board.model.dao;
 
 import java.sql.Connection;
 import java.util.ArrayList;
 
-import notice.model.vo.Board;
+import board.model.vo.Board;
 
 public class BoardDao {
 

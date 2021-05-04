@@ -1,4 +1,4 @@
-package notice.model.vo;
+package board.model.vo;
 
 public class Board {
 	 private int rnum;
