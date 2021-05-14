@@ -34,11 +34,10 @@
 					<td><%=n.getNoticeDate() %></td>
 				</tr>
 				<% }%>
-				
 			</table>
 			<div id="pageNavi"><%=pageNavi %></div>
 		</fieldset>
-	</div> 
+	</div>
 	<%@include file="/WEB-INF/views/common/footer.jsp" %>
 </body>
 </html>

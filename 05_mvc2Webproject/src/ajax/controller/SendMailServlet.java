@@ -28,15 +28,14 @@ public class SendMailServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//1.인코딩
-		request.setCharacterEncoding("utf-8");
-		//2.값추출
+		// 1. 인코딩
+		request.setCharacterEncoding("UTF-8");
+		// 2. 값 추출
 		String email = request.getParameter("email");
-		//3.비즈니스 로직
-		//mail라이브러리가 있어야 메일전송이 가능함
+		// 3. 비즈니스 로직
 		String mailCode = new MailSender().mailSend(email);
-		//4.결과처리
-		PrintWriter out =  response.getWriter();
+		// 4. 결과처리
+		PrintWriter out = response.getWriter();
 		out.print(mailCode);
 	}
 

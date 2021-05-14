@@ -56,8 +56,7 @@ public class PhotoWriteServlet extends HttpServlet {
 		Photo p = new Photo();
 		p.setPhotoWriter(mRequest.getParameter("photoWriter"));
 		p.setPhotoContent(mRequest.getParameter("photoContent"));
-		p.setFilepath(mRequest.getParameter("filename"));
-		System.out.println(p.getFilepath());
+		p.setFilepath(mRequest.getFilesystemName("filename")); //파일은 파라미터 ㄴㄴ연
 		//3. 비지니스 로직
 		int result = new PhotoService().insertPhoto(p);
 		//4.결과처리
@@ -70,7 +69,6 @@ public class PhotoWriteServlet extends HttpServlet {
 		request.setAttribute("loc", "/photoList");
 		rd.forward(request, response);
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

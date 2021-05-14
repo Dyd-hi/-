@@ -9,8 +9,8 @@
 <body>
 	<%@ include file="/WEB-INF/views/common/header.jsp" %>
 	<div class="container">
-		<h3>이메일 보내기</h3>
-		<input type="text" id="email" class="short form-control" placeholder="email주소입력">
+		<h3>Email 보내기</h3>
+		<input type="text" id="email" class="short form-control" placeholder="email 주소 입력">
 		<button id="sendMail" class="btn btn-success">인증코드 보내기</button>
 		<div id="auth">
 			<input type="text" id="authCode" class="short form-control" placeholder="인증코드 입력">
@@ -31,36 +31,36 @@
 					$("#auth").slideDown();
 					authTime();
 				}
-			})
-		})
+			});
+		});
 		$("#authBtn").click(function(){
 			if($("#authCode").val()==mailCode){
-				$("#authMsg").html("인증성공");
-				$("#authMsg").css("color","blue");
+				$("#authMsg").html("인증 성공");
+				$("#authMsg").css("color", "blue");
 				clearInterval(intervalId);
 				$("#timeZone").empty();
 			}else{
 				$("#authMsg").html("인증번호를 확인하세요");
-				$("#authMsg").css("color","red");
+				$("#authMsg").css("color", "red");
 			}
-		})
+		});
 		var intervalId;
 		function authTime(){
 			$("#timeZone").append("<span id='min'>3</span> : <span id='sec'>00</span>");
-			intervalId = window.setInterval(function(){
+			intrvalI = window.setInterval(function(){
 				timeCount();
-			},1000);
+			}, 1000);
 		}
 		function timeCount(){
 			var min = Number($("#min").html());
 			var sec = $("#sec").html();
-			if(sec == "00") {
+			if(sec == "00"){
 				if(min == 0){
 					mailCode = null;
 					clearInterval(intervalId);
 				}else{
 					$("#min").html(--min);
-					$("#sec").html(59);				
+					$("#sec").html(59);
 				}
 			}else{
 				var newSec = Number(sec);
@@ -70,7 +70,6 @@
 				}else{
 					$("#sec").html(newSec);
 				}
-				
 			}
 		}
 	</script>

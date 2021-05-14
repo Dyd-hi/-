@@ -41,10 +41,10 @@
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu5</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="/view/mail.jsp">메일API</a>
-						<a class="dropdown-item" href="#">sub-2</a>
+						<a class="dropdown-item" href="/view/map.jsp">Map</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">sub-3</a>
-						<a class="dropdown-item" href="#">sub-4</a>
+						<a class="dropdown-item" href="/view/payment.jsp">결제모듈</a>
+						<a class="dropdown-item" href="/view/movie.jsp">Movie</a>
 					</div>
 				</li>
 			</ul>
